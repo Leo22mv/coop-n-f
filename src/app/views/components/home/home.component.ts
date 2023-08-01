@@ -72,12 +72,12 @@ export class HomeComponent implements OnInit {
   }
 
   addCliente() {
-    this.router.navigate(["/cliente"]);
+    this.router.navigate(["cliente"]);
     this.vendedoresActive = false;
   }
 
   addVendedor() {
-    this.router.navigate(["/vendedor"]);
+    this.router.navigate(["vendedor"]);
     this.clientesActive = false;
   }
 }
