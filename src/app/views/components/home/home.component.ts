@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   getClientes() {
+    this.router.navigate(["/inicio"])
     this.loading = true;
     this.error = false;
     this.vendedoresActive = false;
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
       this.loading = false;
       this.error = false;
       this.clientes = res;
+      this.vendedores = [];
       // console.log(res);
       this.clientesActive = true;
       this.vendedoresActive = false;
@@ -48,6 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   getVendedores() {
+    this.router.navigate(["/inicio"])
     this.loading = true;
     this.error = false;
     this.vendedoresActive = false;
@@ -69,10 +72,12 @@ export class HomeComponent implements OnInit {
   }
 
   addCliente() {
-    this.router.navigate(["/cliente"])
+    this.router.navigate(["/cliente"]);
+    this.vendedoresActive = false;
   }
 
   addVendedor() {
-    this.router.navigate(["/vendedor"])
+    this.router.navigate(["/vendedor"]);
+    this.clientesActive = false;
   }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { ClientesComponent } from './components/home/clientes/clientes.component';
 import { VendedoresComponent } from './components/home/vendedores/vendedores.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { VendedoresComponent } from './components/home/vendedores/vendedores.com
     VendedoresComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     HomeComponent
